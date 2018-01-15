@@ -1,19 +1,5 @@
-GP.exe : Driver.cpp GeneticNode.h Random.h TestingMacros.h DataUtils.h
-	cl /EHsc Driver.cpp /link /out:GP.exe
-	
-run:
-	GP.exe
+PushToRepo:
+	git push -u origin master
 
-debug:
-	devenv /debugexe GP.exe
-
-clean:
-	del /f GP.exe
-	
-show:
-	git show --pretty="" --name-only
-
-gadd:
-	git add *.cpp
-	git add *.h
-	git add Makefile
+PullMasterFromRepo:
+	git pull https://github.com/Jakato5/Jakato-RotR-Skirmish-Maps.git master
